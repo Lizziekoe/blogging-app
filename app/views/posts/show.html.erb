@@ -1,4 +1,7 @@
-<h1><%= post.title %></h1>
-<h5><%= post.date %></h5>
-<p><%= post.content %></p>
+<h1><%= @post.title %></h1>
+<h5><%= @post.date %></h5>
+<p><%= @post.content %></p>
 <p><%= link_to "Return Home", posts_path %></p>
+<p><%= link_to "Edit", edit_post_path(@post), class: ['btn','btn-warning'] %></p>
+<%= link_to 'Delete Post', post_path(@post), class: ['btn','btn-danger'], method: "delete"  %>
+															
