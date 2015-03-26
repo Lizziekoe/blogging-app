@@ -13,6 +13,26 @@
  *= require_tree .
  *= require_self
  */
+h1 {
+	text-align: center;
+	font-style: italic;
+	color: white;
+}
+
+h3 {
+	text-decoration: underline;
+	color: white;
+}
+
+.postTitle, .postDate, .comment, .patch {
+	text-align: center;
+	color: white;
+}
+
+.postContent {
+	font-size: 17px;
+	text-align: center;
+}
 
  body {
  	font-family: 'Lora', serif;
@@ -23,4 +43,14 @@
   background-size: cover;
  }
 
- .well {}
+ ul {
+ 	list-style: none;
+ }
+
+ .well {
+  background-color:rgba(1, 1, 1, 0.2);
+  margin-top: 4%;
+	}
+
+	/*disable spring*/
+	/*dont add other attributes*/
