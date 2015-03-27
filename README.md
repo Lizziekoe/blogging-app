@@ -1,5 +1,3 @@
-== README
-
 Blogging Site
 ==============
 

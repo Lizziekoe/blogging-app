@@ -1,5 +1,10 @@
+
+<% if user_signed_in? %>
 <h1>New Comment on <%= @post.title %></h1>
 
 <%= render 'form' %>
+<% else %>
+<h4>Please Sign Up or Login To Comment on This Post</h4>
+<% end %>
 
 <%= link_to "Back To Post", post_path(@post) %>

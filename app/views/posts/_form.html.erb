@@ -1,16 +1,22 @@
 <div class="form">
 	<%= form_for @post do |f| %>
 	 <div class="form-group">
+	 <div class="label">
 	  <%= f.label :title %>
+	 </div>
 	  <%= f.text_field :title %>
 	 </div>
 	 <div class="form-group">
+	 <div class="label">
 	  <%= f.label :date %>
+	 </div>
 	  <%= f.text_field :date %>
 	 </div>
 	 <div class="form-group"> 
+	  <div class="label">
 	  <%= f.label :content %>
-	  <%= f.text_area :content %>
+	 </div>
+	  <%= f.text_area :content, :cols => "100", :rows => "10" %>
 	 </div>
 	  <%= f.submit %>
 	<% end %>
