@@ -42,7 +42,7 @@ h3 {
   -o-background-size: cover;
   background-size: cover;
   color: white;
-
+  background-attachment: fixed;
  }
 
  ul {
@@ -50,9 +50,16 @@ h3 {
  }
 
  .well {
-  background-color:rgba(1, 1, 1, 0.2);
+  background-color:rgba(1, 1, 1, 0.6);
   margin-top: 4%;
 	}
 
+	.form {
+		color: black;
+	}
+
+	form {
+		color: black;
+	}
 	/*disable spring*/
 	/*dont add other attributes*/
