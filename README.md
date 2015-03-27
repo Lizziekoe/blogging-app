@@ -7,7 +7,7 @@ Installation and Usage
 ------------
 To run the app simply clone this repository and in your terminal run
 `postgres`, and in another tab run `rails s` and then proceed to `localhost:3000`.
-or view site here: 
+or view site here: https://bloggingsite.herokuapp.com/
 
 Motivation
 --------
