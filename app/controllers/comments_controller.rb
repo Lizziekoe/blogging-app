@@ -9,11 +9,13 @@ class CommentsController < ApplicationController
 		@comment = @post.comments.new(comment_params)
 		if @comment.save
 			flash[:notice] = "Comment successfully added!"
-			redirect_to :back
 		else
 			flash[:alert] = "Error ooops"
-			render :new
-		end
+    end
+		respond_to do |format|
+	    format.html { redirect_to :back }
+	    format.js
+  	end
 	end
 
 	def edit

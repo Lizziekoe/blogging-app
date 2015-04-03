@@ -9,19 +9,11 @@
 
 
 
-
-
 <% if @post.comments.any? %>
-  <h4 class="comment">Here are the comments for this post:</h4>
+  <h4 class="comment comments">Here are the comments for this post:</h4>
 
   <ul>
-    <% @post.comments.each do |comment| %>
-      <li class="comment">
-        <%= comment.name %> posted: <%= comment.content %> |
-        <%= link_to "Edit", edit_post_comment_path(@post, comment) %> |
-        <%= link_to "Delete", post_comment_path(@post, comment), :method => "delete" %>
-      </li>
-    <% end %>
+    <%= render @post.comments %>
   </ul>
 <% else %>
   <p class="comment">There are no comments yet!</p>
@@ -30,6 +22,6 @@
 
 
 
-<p class="comment"><%= link_to "Comment on Post", new_post_comment_path(@post) %></p>		
+<p class="comment"><%= link_to "Comment on Post", new_post_comment_path(@post), id: "new_comment_link", remote: true %></p>		
 
 <p><%= link_to "Home", posts_path %></p>
