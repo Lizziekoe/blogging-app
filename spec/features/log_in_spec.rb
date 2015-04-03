@@ -3,7 +3,7 @@ require 'rails_helper'
 describe "the log in process" do
   it "will display the sign up button on the home page" do
     visit '/'
-    expect(page).to have_content 'Login'
+    expect(page).to have_content 'LogIn'
   end
 
   it "will Log In user when form is filled out correctly" do

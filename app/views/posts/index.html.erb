@@ -5,5 +5,8 @@
     <li><%= link_to post.title, post_path(post) %></li>
   <% end %>
 </ul>
-
-<%= link_to "New Post", new_post_path, class: ['btn'] %>
+<% if user_signed_in? %>
+	<% if @user.email == "lizzie@gmail.com" %>
+		<%= link_to "New Post", new_post_path, class: ['btn'] %>
+	<% end %>
+<% end %>

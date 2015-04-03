@@ -13,7 +13,7 @@ describe "Log out process" do
     fill_in 'Email', with: "liz@zie.com"
     fill_in 'Password' , with: "12345678"
     click_on 'Log in'
-    expect(page).to have_content 'Logout'
+    expect(page).to have_content 'LogOut'
   end
 
   it "will log a user out / close a session when user logs out" do
@@ -23,7 +23,7 @@ describe "Log out process" do
     fill_in 'Email', with: "liz@zie.com"
     fill_in 'Password' , with: "12345678"
     click_on 'Log in'
-    click_on 'Logout'
+    click_on 'LogOut'
     expect(page).to have_content 'Signed out successfully.'
   end
 

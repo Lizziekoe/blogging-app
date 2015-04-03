@@ -1,10 +1,12 @@
 class PostsController < ApplicationController
 	def index
 		@posts = Post.all
+		@user = current_user
 	end
 
 	def new
 		@post = Post.new
+		@user = User.new
 	end
 
 	def create

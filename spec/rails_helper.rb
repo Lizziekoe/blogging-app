@@ -8,13 +8,7 @@ require 'capybara/rails'
 require 'capybara/poltergeist'
 Capybara.javascript_driver = :poltergeist
 
-VCR.configure do |c|
-  c.cassette_library_dir = 'spec/cassettes'
-  c.hook_into :webmock
-  c.configure_rspec_metadata!
-  c.filter_sensitive_data('<twilio account sid>') { ENV['TWILIO_ACCOUNT_SID'] }
-  c.filter_sensitive_data('<twilio auth token>') { ENV['TWILIO_AUTH_TOKEN'] }
-end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 
 # Requires supporting ruby files with custom matchers and macros, etc, in

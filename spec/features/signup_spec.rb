@@ -9,7 +9,7 @@ describe "the sign up process" do
 
   it "will create a new user when new user form is filled out correctly" do
     visit 'users/sign_up'
-    fill_in 'Email', with: "liz@zie.com"
+    fill_in 'Email', with: "lizziefkoehler@gmail.com"
     fill_in 'Password' , with: "12345678"
     fill_in 'Password confirmation' , with: "12345678"
     click_on 'Sign up'
