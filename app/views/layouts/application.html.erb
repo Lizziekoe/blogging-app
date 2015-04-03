@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>BloggingApp</title>
-  <link href='//fonts.googleapis.com/css?family=Lora' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
@@ -11,20 +11,9 @@
 <body>
 <div class="container well">
 
-<div id="user_nav">
-	<% if user_signed_in? %>
-		Logged in as <strong><%= current_user.email %></strong>.
-		<%= link_to "Edit Profile", edit_user_registration_path %>
-		<%= link_to "Logout", destroy_user_session_path, method: :delete %>
-	<% else %>
-		<%= link_to "Sign Up", new_user_registration_path %>
-		<%= link_to "Login", new_user_session_path %>
-	<% end %>
-</div>
-
-	<% flash.each do |name, msg| %>
-	<%= content_tag :div, :msg, id: "flash_#{name}" %>
-	<% end %>
+		<div id="user_nav">
+			<%= render 'layouts/navbar' %>
+		</div>
 
 
 <h1>My So Called Blog</h1>

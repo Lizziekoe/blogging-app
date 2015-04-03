@@ -1,13 +1,15 @@
 require 'rails_helper'
 
-describe "the add a comment process" do
-  it "creates a comment on a post" do
-  	post = FactoryGirl.create(:post)
+describe "the process of creating a new comment", :vcr => true do
+  it "will show form when new comment is clicked", js: true do
+    user = FactoryGirl.create(:user)
+    login_as(user, :scope => :user)
+    post = FactoryGirl.create(:post)
     visit post_path(post)
     click_on 'Comment on Post'
-    fill_in 'commenter-name', :with => 'Horace'
-    fill_in 'Content', :with => 'This is my really lengthy blog post'
-    click_on 'Create Comment'
-    expect(page).to have_content 'Comment successfully added!'
+    expect(page).to have_content 'Name'
   end
- end
+
+
+
+end
