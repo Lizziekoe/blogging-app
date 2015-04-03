@@ -27,10 +27,10 @@ class CommentsController < ApplicationController
 		@post = Post.find(params[:post_id])
 		@comment = Comment.find(params[:id])
 		if @comment.update(comment_params)
-			redirect :back
+			redirect_to post_path(@post)
 		else
 			flash[:notice] = "Error OOps"
-			redirect_to post_path(@post)
+			render :edit
 		end
 	end
 

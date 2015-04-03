@@ -7,16 +7,14 @@
 </ul>
 
 
-
+<h4 class="comments"> </h4>
 
 <% if @post.comments.any? %>
-  <h4 class="comment comments">Here are the comments for this post:</h4>
+  <h4 class="comment">Comments:</h4>
 
   <ul>
     <%= render @post.comments %>
   </ul>
-<% else %>
-  <p class="comment">There are no comments yet!</p>
 <% end %>
 
 
